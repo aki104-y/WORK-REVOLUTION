@@ -33,13 +33,13 @@
       <nav>
         <ul class="header-nav">
           <li class="header-nav__item">
-            <a class="header-nav__link" href="#">about</a>
+            <a class="header-nav__link" href="#about">about</a>
           </li>
           <li class="header-nav__item">
-            <a class="header-nav__link" href="#">speaker</a>
+            <a class="header-nav__link" href="#speaker">speaker</a>
           </li>
           <li class="header-nav__item">
-            <a class="header-nav__link" href="#">session</a>
+            <a class="header-nav__link" href="#session">session</a>
           </li>
         </ul>
       </nav>
@@ -69,7 +69,7 @@
   <!--        メイン        -->
   <div class="main">
     <div class="main__inner">
-      <section class="section section-about">
+      <section id="about" class="section section-about">
         <div class="section__inner">
           <div class="section__title">
             <h2 class="section__title-main">about</h2>
@@ -109,7 +109,7 @@
           </div>
         </div>
       </section>
-      <section class="section section-speaker">
+      <section id="speaker" class="section section-speaker">
         <div class="section__inner">
           <div class="section__title">
             <h2 class="section__title-main">speaker</h2>
@@ -165,7 +165,7 @@
           </div>
         </div>
       </section>
-      <section class="section section-session">
+      <section id="session" class="section section-session">
         <div class="section__inner">
           <div class="section__title">
             <h2 class="section__title-main">SESSION</h2>
@@ -211,7 +211,7 @@
           </div>
         </div>
       </section>
-      <section class="section section-registor">
+      <section id="registor" class="section section-registor">
         <div class="section__inner">
           <div class="section__title">
             <h2 class="section__title-main">registor</h2>
@@ -224,7 +224,7 @@
                   <label for="username" class="form__ttl">ご職業<strong class="label-required">*必須</strong></label>
                   <div class="form__body">
                     <ul class="radioList">
-                      <li><label><input type="radio" name="occupation" value="会社員"><span>会社員</span></label></li>
+                      <li><label><input type="radio" name="occupation" value="会社員" checked><span>会社員</span></label></li>
                       <li><label><input type="radio" name="occupation" value="個人事業主"><span>個人事業主</span></label></li>
                       <li><label><input type="radio" name="occupation" value="求職中"><span>求職中</span></label></li>
                       <li><label><input type="radio" name="occupation" value="その他"><span>その他</span></label></li>
@@ -248,7 +248,7 @@
                   </div>
                 </div>
                 <div class="form__item">
-                  <label for="tel" class="form__ttl">電話番号<small class="form__note">※20文字以内</small></label>
+                  <label for="tel" class="form__ttl">電話番号<small class="form__note">（半角数字ハイフンなし）</small></label>
                   <div class="form__body">
                     <div class="inputField inputField--tel">
                       <input type="tel" name="tel" id="tel">
@@ -258,8 +258,8 @@
                 <div class="form__item">
                   <label for="message" class="form__ttl">スピーカーに質問したいこと</label>
                   <div class="form__body">
-                    <div class="inputField inputField--message">
-                      <textarea id="message" name="message" placeholder="ご自由にお書きください"></textarea>
+                    <div class="inputField">
+                      <textarea id="message" name="message" placeholder="ご自由にお書きください" class="form__textarea"></textarea>
                     </div>
                   </div>
                 </div>
