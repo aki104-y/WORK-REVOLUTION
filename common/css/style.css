@@ -5,19 +5,19 @@
    # ================================================================= */
 html {
   box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   /* Prevent adjustments of font size after orientation changes in iOS */
   word-break: normal;
-  -moz-tab-size: 4;
+  tab-size: 4;
   tab-size: 4;
 }
 
 *,
 ::before,
 ::after {
+  box-sizing: inherit;
   background-repeat: no-repeat;
   /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
-  box-sizing: inherit;
 }
 
 ::before,
@@ -34,13 +34,13 @@ html {
 }
 
 /* # =================================================================
-   # General elements
-   # ================================================================= */
+     # General elements
+     # ================================================================= */
 hr {
-  overflow: visible;
-  /* Show the overflow in Edge and IE */
   height: 0;
   /* Add the correct box sizing in Firefox */
+  overflow: visible;
+  /* Show the overflow in Edge and IE */
   color: inherit;
   /* Correct border color in Firefox. */
 }
@@ -67,11 +67,11 @@ small {
 }
 
 abbr[title] {
-  border-bottom: none;
-  /* Remove the bottom border in Chrome 57 */
   /* Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari */
   text-decoration: underline;
   text-decoration: underline dotted;
+  border-bottom: none;
+  /* Remove the bottom border in Chrome 57 */
 }
 
 a {
@@ -107,9 +107,9 @@ strong {
 /* https://gist.github.com/unruthless/413930 */
 sub,
 sup {
+  position: relative;
   font-size: 75%;
   line-height: 0;
-  position: relative;
   vertical-align: baseline;
 }
 
@@ -122,10 +122,10 @@ sup {
 }
 
 table {
-  border-color: inherit;
-  /* Correct border color in all Chrome, Edge, and Safari. */
   text-indent: 0;
   /* Remove text indentation in Chrome, Edge, and Safari */
+  border-color: inherit;
+  /* Correct border color in all Chrome, Edge, and Safari. */
 }
 
 iframe {
@@ -133,8 +133,8 @@ iframe {
 }
 
 /* # =================================================================
-   # Forms
-   # ================================================================= */
+     # Forms
+     # ================================================================= */
 input {
   border-radius: 0;
 }
@@ -146,14 +146,14 @@ input {
 }
 
 [type=search] {
-  -webkit-appearance: textfield;
+  appearance: textfield;
   /* Correct the odd appearance in Chrome and Safari */
   outline-offset: -2px;
   /* Correct the outline style in Safari */
 }
 
 [type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
+  appearance: none;
   /* Remove the inner padding in Chrome and Safari on macOS */
 }
 
@@ -203,8 +203,8 @@ button::-moz-focus-inner,
 [type=button]::-moz-focus-inner,
 [type=reset]::-moz-focus-inner,
 [type=submit]::-moz-focus-inner {
-  border-style: none;
   padding: 0;
+  border-style: none;
 }
 
 /* Replace focus style removed in the border reset above */
@@ -219,7 +219,7 @@ button,
 html [type=button],
 [type=reset],
 [type=submit] {
-  -webkit-appearance: button;
+  appearance: button;
   /* Correct the inability to style clickable types in iOS */
 }
 
@@ -242,9 +242,9 @@ textarea:focus {
 
 /* Style select like a standard input */
 select {
-  -moz-appearance: none;
+  appearance: none;
   /* Firefox 36+ */
-  -webkit-appearance: none;
+  appearance: none;
   /* Chrome 41+ */
 }
 
@@ -254,31 +254,31 @@ select::-ms-expand {
 }
 
 select::-ms-value {
-  color: currentColor;
+  color: currentcolor;
   /* Internet Explorer 11+ */
 }
 
 legend {
-  border: 0;
-  /* Correct `color` not being inherited in IE 8/9/10/11 */
-  color: inherit;
-  /* Correct the color inheritance from `fieldset` elements in IE */
   display: table;
   /* Correct the text wrapping in Edge and IE */
   max-width: 100%;
   /* Correct the text wrapping in Edge and IE */
-  white-space: normal;
-  /* Correct the text wrapping in Edge and IE */
   max-width: 100%;
   /* Correct the text wrapping in Edge 18- and IE */
+  color: inherit;
+  /* Correct the color inheritance from `fieldset` elements in IE */
+  white-space: normal;
+  /* Correct the text wrapping in Edge and IE */
+  border: 0;
+  /* Correct `color` not being inherited in IE 8/9/10/11 */
 }
 
 ::-webkit-file-upload-button {
-  /* Correct the inability to style clickable types in iOS and Safari */
-  -webkit-appearance: button;
-  color: inherit;
   font: inherit;
   /* Change font properties to `inherit` in Chrome and Safari */
+  color: inherit;
+  /* Correct the inability to style clickable types in iOS and Safari */
+  appearance: button;
 }
 
 /* Replace pointer cursor in disabled elements */
@@ -287,8 +287,8 @@ legend {
 }
 
 /* # =================================================================
-   # Specify media element style
-   # ================================================================= */
+     # Specify media element style
+     # ================================================================= */
 img {
   border-style: none;
   /* Remove border when inside `a` element in IE 8/9/10 */
@@ -300,8 +300,8 @@ progress {
 }
 
 /* # =================================================================
-   # Accessibility
-   # ================================================================= */
+     # Accessibility
+     # ================================================================= */
 /* Specify the progress cursor of updating elements */
 [aria-busy=true] {
   cursor: progress;
@@ -317,12 +317,12 @@ progress {
   cursor: default;
 }
 
-/*----------------------------------------
+/* ----------------------------------------
 	共通部分
-----------------------------------------*/
+---------------------------------------- */
 html {
-  font-size: 100%;
   box-sizing: border-box;
+  font-size: 100%;
 }
 
 *,
@@ -358,8 +358,8 @@ li {
   z-index: 20;
   position: fixed;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 60px;
   padding: 20px;
@@ -390,17 +390,17 @@ li {
 }
 
 .header-nav__link {
-  font-size: 0.75rem;
-  color: #ffffff;
   margin-left: 15px;
+  font-size: 0.75rem;
   font-weight: bold;
-  letter-spacing: 0.05em;
+  color: #fff;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 @media screen and (min-width: 768px) {
   .header-nav__link {
-    font-size: 1rem;
     margin-left: 30px;
+    font-size: 1rem;
   }
 }
 
@@ -420,9 +420,9 @@ li {
   }
 }
 .footer__inner .copyright {
-  color: #ffffff;
   font-size: 0.6875rem;
   font-weight: bold;
+  color: #fff;
   letter-spacing: 0.08em;
 }
 @media screen and (min-width: 768px) {
@@ -434,17 +434,17 @@ li {
 /* mv
 ------------------------------------------------------ */
 .mv {
-  background-image: linear-gradient(135deg, #0e002e 0%, #1e092b 23%, #320c65 49%, #a01b7c 80%, #c21780 100%);
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(135deg, #0e002e 0%, #1e092b 23%, #320c65 49%, #a01b7c 80%, #c21780 100%);
 }
 
 .mv__inner {
-  height: 450px;
+  display: flex;
   max-width: 1240px;
+  height: 450px;
   padding: 0 30px;
   margin: 0 auto;
-  display: flex;
 }
 @media screen and (min-width: 768px) {
   .mv__inner {
@@ -464,15 +464,15 @@ li {
 }
 
 .mv__title-area::after {
-  content: "";
-  background-image: url(../../images/teiji-de-kaerumon.svg);
-  display: inline-block;
-  background-size: contain;
   position: absolute;
   bottom: 35%;
   left: 48%;
+  display: inline-block;
   width: 153px;
   height: 64px;
+  content: "";
+  background-image: url(../../images/teiji-de-kaerumon.svg);
+  background-size: contain;
 }
 @media screen and (min-width: 576px) {
   .mv__title-area::after {
@@ -490,10 +490,10 @@ li {
 }
 
 .mv__sub-title {
-  line-height: 1.3;
-  font-weight: bold;
-  color: #d136d1;
   margin-bottom: 0.8em;
+  font-weight: bold;
+  line-height: 1.3;
+  color: #d136d1;
 }
 @media screen and (min-width: 768px) {
   .mv__sub-title {
@@ -509,17 +509,17 @@ li {
 }
 
 .mv__title {
+  margin-bottom: 10px;
   font-size: clamp(1.5rem, 10vw, 6.25rem);
   font-weight: bold;
   line-height: 1;
-  margin-bottom: 10px;
 }
 
 .mv__date {
+  margin-bottom: 30px;
   font-size: 1.125rem;
   font-weight: bold;
   letter-spacing: 0.07em;
-  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .mv__date {
@@ -551,15 +551,15 @@ li {
 
 .mv__img {
   position: absolute;
-  width: 340px;
-  right: -80px;
   top: 3px;
+  right: -80px;
+  width: 340px;
 }
 @media screen and (min-width: 768px) {
   .mv__img {
-    width: auto;
-    right: 0px;
     top: -36px;
+    right: 0;
+    width: auto;
   }
 }
 
@@ -567,8 +567,8 @@ li {
 ------------------------------------------------------ */
 .section__inner {
   max-width: 1170px;
-  margin: 0 auto;
   padding: 50px 20px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .section__inner {
@@ -577,10 +577,10 @@ li {
 }
 
 .section__title {
-  text-align: center;
   margin-bottom: 20px;
   font-weight: bold;
   line-height: 1;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .section__title {
@@ -589,17 +589,17 @@ li {
 }
 
 .section__title-main {
-  font-size: 2rem;
   margin-bottom: 5px;
+  font-size: 2rem;
   line-height: 1;
-  letter-spacing: 0.05em;
   color: #d136d1;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 @media screen and (min-width: 768px) {
   .section__title-main {
-    font-size: 3.75rem;
     margin-bottom: 10px;
+    font-size: 3.75rem;
   }
 }
 
@@ -613,7 +613,8 @@ li {
   }
 }
 
-.section-about, .section-session {
+.section-about,
+.section-session {
   background-color: #141414;
 }
 
@@ -632,38 +633,38 @@ li {
   display: inline-block;
   width: 180px;
   max-width: 100%;
-  font-size: 1rem;
   padding: 20px 0;
-  background-image: linear-gradient(135deg, #c41a7f 0%, #664bbf 100%);
-  border-radius: 50px;
-  box-shadow: 0 6px 0 #dd118e;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1;
   color: #fff;
   text-align: center;
   text-decoration: none;
+  background-image: linear-gradient(135deg, #c41a7f 0%, #664bbf 100%);
+  border-radius: 50px;
+  box-shadow: 0 6px 0 #dd118e;
   transition: 0.25s;
-  line-height: 1;
-  font-weight: bold;
 }
 @media screen and (min-width: 768px) {
   .btn {
     width: 300px;
     padding: 24px 10px;
-    box-shadow: 0 10px 0 #dd118e;
     font-size: 1.125rem;
+    box-shadow: 0 10px 0 #dd118e;
   }
 }
 
 .btn:hover {
-  transform: translateY(4px);
   box-shadow: 0 6px 0 #dd118e;
+  transform: translateY(4px);
 }
 
 /* about
 ------------------------------------------------------ */
 .about {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 }
 @media screen and (min-width: 768px) {
   .about {
@@ -671,13 +672,13 @@ li {
   }
 }
 
-.about__img-inner {
+.about__img-wrapper {
   width: 100%;
   margin-right: 0;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
-  .about__img-inner {
+  .about__img-wrapper {
     flex: 0 1 40%;
     margin-right: 9.33333%;
   }
@@ -706,41 +707,41 @@ li {
 }
 
 .about__subtitle {
-  font-size: 1.125rem;
   margin-bottom: 16px;
+  font-size: 1.125rem;
 }
 @media screen and (min-width: 768px) {
   .about__subtitle {
-    font-size: 1.5rem;
     margin-bottom: 20px;
+    font-size: 1.5rem;
   }
 }
 
 .about__title {
+  margin-bottom: 25px;
   font-size: 2.5rem;
   font-weight: bold;
   line-height: 1;
-  letter-spacing: 0.1em;
   color: #d136d1;
-  margin-bottom: 25px;
+  letter-spacing: 0.1em;
 }
 @media screen and (min-width: 768px) {
   .about__title {
-    font-size: 3rem;
     margin-bottom: 40px;
+    font-size: 3rem;
   }
 }
 
 .about__text {
+  margin-bottom: 15px;
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 15px;
 }
 @media screen and (min-width: 768px) {
   .about__text {
+    margin-bottom: 20px;
     font-size: 1.125rem;
     line-height: 1.8;
-    margin-bottom: 20px;
   }
 }
 
@@ -789,17 +790,17 @@ li {
   }
 }
 
-.speaker--reverse .speaker__img-inner {
+.speaker--reverse .speaker__img-wrapper {
   margin-right: 0;
 }
 
-.speaker__img-inner {
+.speaker__img-wrapper {
   width: 100%;
   margin-right: 0;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
-  .speaker__img-inner {
+  .speaker__img-wrapper {
     flex: 0 1 40%;
     margin-right: 5.12%;
   }
@@ -831,10 +832,10 @@ li {
 }
 
 .speaker__name-main {
+  margin-bottom: 5px;
   font-size: 2rem;
   line-height: 1;
   color: #d136d1;
-  margin-bottom: 5px;
 }
 @media screen and (min-width: 768px) {
   .speaker__name-main {
@@ -853,40 +854,40 @@ li {
 }
 
 .speaker__text {
+  margin-bottom: 15px;
   font-size: 0.875rem;
   line-height: 1.6;
-  margin-bottom: 15px;
 }
 @media screen and (min-width: 768px) {
   .speaker__text {
+    margin-bottom: 20px;
     font-size: 1rem;
     line-height: 1.8;
-    margin-bottom: 20px;
   }
 }
 
 /* table
 ------------------------------------------------------ */
 .table__inner {
-  border-collapse: collapse;
-  /*セル同士の間に隙間を開けない*/
   width: 100%;
+  border-collapse: collapse;
+  /* セル同士の間に隙間を開けない */
 }
 
 .table__header {
   width: 80px;
-  font-size: 1rem;
   padding: 20px 0;
-  border-bottom: 1px solid #d136d1;
+  font-size: 1rem;
   font-weight: bold;
-  vertical-align: top;
   text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #d136d1;
 }
 @media screen and (min-width: 768px) {
   .table__header {
     width: 200px;
-    font-size: 1.375rem;
     padding: 40px 30px;
+    font-size: 1.375rem;
   }
 }
 
@@ -907,15 +908,15 @@ li {
 }
 
 .table__title {
+  margin-bottom: 10px;
   font-size: 1.125rem;
   font-weight: bold;
   color: #d136d1;
-  margin-bottom: 10px;
 }
 @media screen and (min-width: 768px) {
   .table__title {
-    font-size: 1.375rem;
     margin-bottom: 15px;
+    font-size: 1.375rem;
   }
 }
 
@@ -929,10 +930,10 @@ li {
   }
 }
 
-/*----------------------------------------
+/* ----------------------------------------
 	Form Parts
-----------------------------------------*/
-/*各フォーム部品の基本スタイルを上書きします*/
+---------------------------------------- */
+/* 各フォーム部品の基本スタイルを上書きします */
 input[type=text],
 input[type=email],
 input[type=tel],
@@ -941,22 +942,22 @@ input[type=search],
 input[type=number],
 textarea,
 select {
-  -webkit-appearance: none;
-  appearance: none;
-  /*ブラウザ標準スタイルを無効にする*/
+  /* ブラウザ標準スタイルを無効にする */
   width: 100%;
   padding: 8px;
-  border-radius: 5px;
-  border: 1px solid #aaa;
   font-size: 1rem;
-  background-color: #ffffff;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  appearance: none;
+  appearance: none;
 }
 
 .form-container {
   padding: 8%;
+  background-color: #1a1a1a;
   border: 5px solid #d136d1;
   border-radius: 20px;
-  background-color: #1a1a1a;
 }
 @media screen and (min-width: 768px) {
   .form-container {
@@ -974,8 +975,8 @@ select {
 
 .form__ttl {
   display: inline-block;
-  font-weight: bold;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .form__body {
@@ -983,8 +984,8 @@ select {
 }
 
 input[type=radio] + span {
-  margin-right: 35px;
   padding-left: 5px;
+  margin-right: 35px;
 }
 
 .form__textarea {
@@ -1001,8 +1002,8 @@ input[type=radio] + span {
   text-align: center;
 }
 
-/*入力フィールド
----------------------------------*/
+/* 入力フィールド
+--------------------------------- */
 @media screen and (min-width: 768px) {
   .inputField {
     width: 300px;
@@ -1015,15 +1016,15 @@ input[type=radio] + span {
   }
 }
 
-/*補足説明文
----------------------------------*/
+/* 補足説明文
+--------------------------------- */
 .form__note {
   margin-left: 5px;
   font-size: 0.75rem;
 }
 
-/*水平ラジオボタン選択肢リスト
----------------------------------*/
+/* 水平ラジオボタン選択肢リスト
+--------------------------------- */
 @media screen and (min-width: 768px) {
   .radioList {
     display: flex;
@@ -1031,34 +1032,34 @@ input[type=radio] + span {
   }
 }
 
-/*セレクトボックス
-------------------------------------*/
+/* セレクトボックス
+------------------------------------ */
 select {
-  -webkit-appearance: none;
-  appearance: none;
   display: block;
   width: 100%;
   padding: 10px 30px 8px 10px;
-  border-radius: 4px;
   border: 1px solid #ccc;
+  border-radius: 4px;
+  appearance: none;
+  appearance: none;
 }
 
-/*必須・任意ラベル
----------------------------------*/
+/* 必須・任意ラベル
+--------------------------------- */
 .label-required {
+  margin-left: 10px;
   font-size: 0.75rem;
   color: #d136d1;
-  margin-left: 10px;
 }
 
 /* page-top
 ------------------------------------------------------ */
 .page-top {
   z-index: 10;
-  display: none;
   position: fixed;
   right: 20px;
   bottom: 20px;
+  display: none;
 }
 @media screen and (min-width: 768px) {
   .page-top {
@@ -1075,11 +1076,11 @@ select {
   height: 50px;
   color: #fff;
   text-align: center;
-  transition: opacity 0.3s;
-  border-radius: 50%;
-  background-image: linear-gradient(135deg, #c41a7f 0%, #664bbf 100%);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  background-image: linear-gradient(135deg, #c41a7f 0%, #664bbf 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s;
 }
 @media screen and (min-width: 768px) {
   .page-top__link {
@@ -1090,9 +1091,9 @@ select {
 
 .page-top__link::after {
   font-family: "Material Icons Round";
-  content: "\e316";
-  color: #ffffff;
   font-size: 1.5rem;
+  color: #fff;
+  content: "\e316";
 }
 @media screen and (min-width: 768px) {
   .page-top__link::after {
@@ -1103,16 +1104,16 @@ select {
 /* swiper
 ------------------------------------------------------ */
 .swiper-container {
+  position: relative;
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  position: relative;
 }
 
 .swiper {
+  position: relative;
   width: 100%;
   height: 100%;
-  position: relative;
   padding-bottom: 39px;
 }
 
@@ -1125,15 +1126,15 @@ select {
 .swiper-button-prev {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
   background-color: #fff;
+  border-radius: 50%;
 }
 @media screen and (min-width: 992px) {
   .swiper-button-next,
 .swiper-button-prev {
+    top: 335px;
     width: 60px;
     height: 60px;
-    top: 335px;
   }
 }
 
@@ -1155,24 +1156,24 @@ select {
   }
 }
 
-.swiper-button-prev:after,
-.swiper-button-next:after {
+.swiper-button-prev::after,
+.swiper-button-next::after {
   font-family: "Material Icons Round";
   font-size: 1.5rem;
   color: #d136d1;
 }
 @media screen and (min-width: 992px) {
-  .swiper-button-prev:after,
-.swiper-button-next:after {
+  .swiper-button-prev::after,
+.swiper-button-next::after {
     font-size: 2rem;
   }
 }
 
-.swiper-button-prev:after {
+.swiper-button-prev::after {
   content: "navigate_before";
 }
 
-.swiper-button-next:after {
+.swiper-button-next::after {
   content: "navigate_next";
 }
 
