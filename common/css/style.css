@@ -455,7 +455,7 @@ li {
 
 .mv__title-area {
   z-index: 1;
-  padding-top: 75px;
+  padding-top: 100px;
 }
 @media screen and (min-width: 768px) {
   .mv__title-area {
@@ -465,8 +465,8 @@ li {
 
 .mv__title-area::after {
   position: absolute;
-  bottom: 35%;
-  left: 48%;
+  bottom: 39%;
+  left: 34%;
   display: inline-block;
   width: 153px;
   height: 64px;
@@ -483,7 +483,7 @@ li {
 @media screen and (min-width: 768px) {
   .mv__title-area::after {
     bottom: 175px;
-    left: 382px;
+    left: 36%;
     width: 355px;
     height: 140px;
   }
@@ -529,7 +529,7 @@ li {
 
 .mv__speaker-name {
   position: absolute;
-  right: 20px;
+  right: 5%;
   bottom: 20px;
   font-size: 0.75rem;
   line-height: 1;
@@ -537,6 +537,7 @@ li {
 @media screen and (min-width: 768px) {
   .mv__speaker-name {
     font-size: 1.3125rem;
+    right: 12%;
   }
 }
 
@@ -558,7 +559,7 @@ li {
 @media screen and (min-width: 768px) {
   .mv__img {
     top: -36px;
-    right: 0;
+    right: 10%;
     width: auto;
   }
 }
